@@ -21,19 +21,19 @@ body {
 }
 
 .body {
-  @apply flex items-center justify-between pt-[10vh];
+  @apply lg:flex items-center justify-between lg:pt-[10vh] pt-[2vh];
 }
 
 .search-box {
-  @apply w-[25vw] px-[1.5vw] py-[2vh] rounded-md border border-b-brown dark:border-b-white border-opacity-50 text-[1.8vh] font-raleway font-light;
+  @apply lg:w-[25vw] sm:w-[50vw] w-full sm:px-[1.5vw] xs:px-[1.8vw] px-[4vw] py-[2vh] rounded-md border border-b-brown dark:border-b-white border-opacity-50 text-[1.8vh] font-raleway font-light;
 }
 
 .search-button {
-  @apply bg-black dark:bg-off-white px-[3vw] py-[2vh] text-[2vh] uppercase font-light dark:font-normal tracking-[1.5px] font-raleway text-white dark:text-black rounded-md drop-shadow-lg mt-[5vh];
+  @apply bg-black dark:bg-off-white lm:px-[3vw] xs:px-[6vw] px-[10vw] py-[2vh] xs:text-[2vh] text-[1.8vh] uppercase font-light dark:font-normal tracking-[1.5px] font-raleway text-white dark:text-black rounded-md drop-shadow-lg lg:mt-[5vh] mt-[2vh];
 }
 
 .user-box {
-  @apply m-auto bg-brown w-full py-[10vh] flex justify-evenly items-center text-white dark:text-black font-raleway rounded-tl-3xl;
+  @apply m-auto bg-brown w-full xs:py-[10vh] py-[15vh] xs:flex xs:text-left text-center justify-evenly items-center text-white dark:text-black font-raleway rounded-tl-3xl;
 }
 
 .img-style {
@@ -41,5 +41,5 @@ body {
 }
 
 .footer {
-  @apply sm:text-[1.6vh] text-[1.6vh] mb-[1rem] md:mr-0 mr-[2vw] font-raleway font-extralight flex md:justify-center justify-end gap-1 uppercase tracking-[0.2px] absolute inset-x-0 bottom-0;
-}
+  @apply sm:text-[1.6vh] text-[1.6vh] mb-[1rem] md:mr-0 mr-[2vw] lg:py-0 pt-[10vh] font-raleway font-extralight flex md:justify-center justify-end gap-1 uppercase tracking-[0.2px] lg:absolute inset-x-0 bottom-0;
+} 

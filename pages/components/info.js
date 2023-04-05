@@ -1,9 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
 
-const Info = ({ username }) => {
+function Info({ username }) {
     const [user, setUser] = useState({})
     const [repos, setRepos] = useState([])
     const [found, setFound] = useState(false)
@@ -20,6 +19,7 @@ const Info = ({ username }) => {
             userData.json().then((response) => {
                 try {
                     console.log("USERDATA RESPONSE", response)
+                    // sorts data from "created_at" in descending order
                     response.sort((a, b) => {
                         if (a.created_at < b.created_at) {
                             return 1;
@@ -48,9 +48,9 @@ const Info = ({ username }) => {
 
     function userInfo(user) {
         return (
-            <motion.div layout className='user-box'>
-                <div className="text-center space-y-8">
-                    <div className='h-[20vh] w-[20vh] relative'>
+            <div layout className='user-box'>
+                <div className="text-center space-y-8 xs:pb-0 pb-[5vh]">
+                    <div className='h-[20vh] w-[20vh] relative xs:m-0 m-auto'>
                         <Image src={user.avatar_url} fill className='img-style' unoptimized />
                     </div>
                     <ul className='font-extralight tracking-[0.2px]'>
@@ -69,7 +69,7 @@ const Info = ({ username }) => {
                             {repos.map(element => {
                                 return (
                                     <li key={element.id}>
-                                        <Link href={`https://github.com/${username}/${element.name}`}>
+                                        <Link href={`https://github.com/${username}/${element.name}`} target="_blank">
                                             {element.name}
                                         </Link>
                                     </li>
@@ -78,7 +78,7 @@ const Info = ({ username }) => {
                         </ul>
                     </div>
                 </div>
-            </motion.div>
+            </div>
         )
     }
 

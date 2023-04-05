@@ -7,7 +7,7 @@ import Info from './components/info';
 export default function Home() {
   const {theme, setTheme} = useTheme();
   const [username, setUsername] = useState("")
-  const [info, setInfo] = useState({ element: <div style={{ display: "none" }} /> });
+  const [info, setInfo] = useState(false);
 
   const handleSubmit = (e) => {
     console.log("submitted")
@@ -16,7 +16,7 @@ export default function Home() {
   }
 
   return (
-    <div className="h-screen dark:bg-black">
+    <div className="lg:h-screen dark:bg-black">
       <div className='header'>
         <button onClick={() => {
           setTheme(theme === "dark" ? "light" : "dark")
@@ -26,7 +26,7 @@ export default function Home() {
           <h4 className='light-text'>light</h4>
           <h4 className='dark-text'>dark</h4>
         </button>
-        <h1 className='font-gideon text-[4vh]'>profile search engine</h1>
+        <h1 className='font-gideon xs:text-[4vh] text-[3vh]'>profile search engine</h1>
       </div>
       <div className='body'>
         <div className='px-[15vw] py-[15vh]'>
