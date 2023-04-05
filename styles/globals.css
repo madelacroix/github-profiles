@@ -36,10 +36,14 @@ body {
   @apply m-auto bg-brown w-full xs:py-[10vh] py-[15vh] xs:flex xs:text-left text-center justify-evenly items-center text-white dark:text-black font-raleway rounded-tl-3xl;
 }
 
+.user-info {
+  @apply text-center space-y-8 xs:pb-0 pb-[5vh];
+}
+
 .img-style {
   @apply object-cover rounded-full border-[0.8rem] border-[#797570];
 }
 
 .footer {
-  @apply sm:text-[1.6vh] text-[1.6vh] mb-[1rem] md:mr-0 mr-[2vw] lg:py-0 pt-[10vh] font-raleway font-extralight flex md:justify-center justify-end gap-1 uppercase tracking-[0.2px] lg:absolute inset-x-0 bottom-0;
+  @apply sm:text-[1.6vh] text-[1.6vh] md:mr-0 mr-[2vw] lg:py-0 pt-[10vh] font-raleway font-extralight flex md:justify-center justify-end gap-1 uppercase tracking-[0.2px] mt-auto pb-[1rem];
 } 

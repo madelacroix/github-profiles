@@ -16,7 +16,7 @@ export default function Home() {
   }
 
   return (
-    <div className="lg:h-screen dark:bg-black">
+    <div className="dark:bg-black flex flex-col min-h-screen">
       <div className='header'>
         <button onClick={() => {
           setTheme(theme === "dark" ? "light" : "dark")

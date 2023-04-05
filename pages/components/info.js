@@ -49,7 +49,7 @@ function Info({ username }) {
     function userInfo(user) {
         return (
             <div layout className='user-box'>
-                <div className="text-center space-y-8 xs:pb-0 pb-[5vh]">
+                <div className="user-info">
                     <div className='h-[20vh] w-[20vh] relative xs:m-0 m-auto'>
                         <Image src={user.avatar_url} fill className='img-style' unoptimized />
                     </div>
